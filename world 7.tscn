@@ -1,0 +1,112 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://autotiles.tres" type="TileSet" id=1]
+[ext_resource path="res://nonautotile.tres" type="TileSet" id=2]
+[ext_resource path="res://player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://worldcomplete.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Bot.tscn" type="PackedScene" id=5]
+
+[node name="world 7" type="Node" index="0"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 131063, 0, 196613, 196607, 0, 196608, 131072, 0, 196610, 262138, 0, 196613, 327676, 0, 196608, 327677, 0, 196610 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TileMap2" type="TileMap" parent="." index="1"]
+
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray(  )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="player" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 0, -32 )
+
+[node name="worldcomplete" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( -800, -32 )
+
+[node name="Node" type="Node" parent="." index="4"]
+
+[node name="Bot" parent="Node" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( -32, 112 )
+world_scene = "res://world 7.tscn"
+
+[node name="Bot8" parent="Node" index="1" instance=ExtResource( 5 )]
+
+position = Vector2( -340, 176 )
+world_scene = "res://world 6.tscn"
+
+[node name="Bot9" parent="Node" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( -544, 48 )
+world_scene = "res://world 6.tscn"
+
+[node name="Bot4" parent="Node" index="3" instance=ExtResource( 5 )]
+
+position = Vector2( -160, 240 )
+world_scene = "res://world 6.tscn"
+
+[node name="Bot5" parent="Node" index="4" instance=ExtResource( 5 )]
+
+position = Vector2( -192, 240 )
+world_scene = "res://world 7.tscn"
+
+[node name="Bot6" parent="Node" index="5" instance=ExtResource( 5 )]
+
+position = Vector2( -192, 240 )
+world_scene = "res://world 6.tscn"
+
+[node name="Bot7" parent="Node" index="6" instance=ExtResource( 5 )]
+
+position = Vector2( -224, 240 )
+world_scene = "res://world 6.tscn"
+
+[node name="Bot2" parent="Node" index="7" instance=ExtResource( 5 )]
+
+position = Vector2( 0, 112 )
+world_scene = "res://world 7.tscn"
+
+[node name="Bot3" parent="Node" index="8" instance=ExtResource( 5 )]
+
+position = Vector2( 32, 112 )
+world_scene = "res://world 7.tscn"
+
+

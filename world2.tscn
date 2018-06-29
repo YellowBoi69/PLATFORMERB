@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://autotiles.tres" type="TileSet" id=1]
+[ext_resource path="res://player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://worldcomplete.tscn" type="PackedScene" id=3]
+[ext_resource path="res://nonautotile.tres" type="TileSet" id=4]
+[ext_resource path="res://Bot.tscn" type="PackedScene" id=5]
+
+[node name="world2" type="Node" index="0"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 131078, 0, 5, 196614, 0, 65541, 196622, 0, 0, 196623, 2, 0, 262144, 0, 5, 262150, 0, 8, 262151, 0, 65536, 262152, 0, 65536, 262153, 0, 2, 262158, 0, 0, 262159, 5, 0, 327680, 0, 65541, 327686, 0, 131073, 327687, 0, 196619, 327688, 0, 196619, 327689, 0, 131074, 327694, 0, 0, 327695, 5, 0, 393216, 0, 65541, 393222, 0, 131073, 393223, 0, 196619, 393224, 0, 196619, 393225, 0, 65539, 393226, 0, 2, 393230, 3, 0, 393231, 5, 0, 458752, 0, 65541, 458756, 0, 1, 458757, 0, 65536, 458758, 0, 65540, 458759, 0, 196619, 458760, 0, 196619, 458761, 0, 196619, 458762, 0, 65539, 458763, 0, 65536, 458764, 0, 2, 458766, 3, 0, 458767, 5, 0, 524288, 0, 65541, 524292, 0, 131073, 524293, 0, 196619, 524294, 0, 196619, 524295, 0, 196619, 524296, 0, 196619, 524297, 0, 196619, 524298, 0, 196619, 524299, 0, 196619, 524300, 0, 65539, 524301, 0, 65536, 524302, 0, 65536, 524303, 0, 2, 589824, 0, 65542, 589825, 0, 196609, 589826, 0, 196609, 589827, 0, 196609, 589828, 0, 65544, 589829, 0, 131072, 589830, 0, 131072, 589831, 0, 131072, 589832, 0, 131072, 589833, 0, 131072, 589834, 0, 131072, 589835, 0, 131072, 589836, 0, 131072, 589837, 0, 131072, 589838, 0, 131072, 589839, 0, 65547, 589840, 0, 196609, 589841, 0, 196609, 589842, 0, 196609, 589843, 0, 196610 )
+_sections_unfolded = [ "Cell" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="player" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 96, 224 )
+
+[node name="worldcomplete" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 608, 256 )
+world_scene = "res://world3.tscn"
+
+[node name="TileMap2" type="TileMap" parent="." index="3"]
+
+mode = 0
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 262151, 15, 0, 393226, 15, 0, 458763, 15, 0, 524301, 15, 0, 589825, 15, 0, 589840, 15, 0 )
+_sections_unfolded = [ "Cell" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Bot" parent="." index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 480, 240 )
+world_scene = "res://world2.tscn"
+
+[node name="Bot2" parent="." index="5" instance=ExtResource( 5 )]
+
+position = Vector2( 288, 112 )
+world_scene = "res://world2.tscn"
+
+
