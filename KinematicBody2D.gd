@@ -9,6 +9,9 @@ const GRAVITY=20
 var max_speed=150
 const JUMP_HEIGHT=-550
 
+func _ready():
+	add_to_group("players",true)
+
 func _physics_process(delta):
 	if is_on_floor():
 		if Input.is_action_pressed("ui_sprint"):

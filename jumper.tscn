@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Area2D.gd" type="Script" id=1]
+[ext_resource path="res://art/playerGrey_up1.png" type="Texture" id=2]
+[ext_resource path="res://art/playerGrey_up2.png" type="Texture" id=3]
+
+[sub_resource type="CapsuleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 12.0
+height = 3.0
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+} ]
+
+[node name="BAdiie" type="Area2D" index="0"]
+
+position = Vector2( 16, 16 )
+scale = Vector2( 0.5, 0.5 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+world_scene = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( 0, -0.117645 )
+scale = Vector2( 2.46154, 2.45249 )
+shape = SubResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="1"]
+
+position = Vector2( -1.90735e-006, -0.119396 )
+scale = Vector2( 0.592593, 0.47583 )
+frames = SubResource( 1 )
+animation = "jump"
+_sections_unfolded = [ "Transform" ]
+
+

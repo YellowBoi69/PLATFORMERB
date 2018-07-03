@@ -10,7 +10,6 @@ extents = Vector2( 32, 32 )
 
 [node name="worldcomplete" type="Area2D" index="0"]
 
-editor/display_folded = true
 position = Vector2( 480, 96 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -20,6 +19,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
+_sections_unfolded = [ "Material", "Visibility" ]
 world_scene = null
 
 [node name="Sprite" type="Sprite" parent="." index="0"]

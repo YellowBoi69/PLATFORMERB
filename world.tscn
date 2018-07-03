@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://worldcomplete.tscn" type="PackedScene" id=2]
 [ext_resource path="res://autotiles.tres" type="TileSet" id=3]
 [ext_resource path="res://nonautotile.tres" type="TileSet" id=4]
 [ext_resource path="res://Bot.tscn" type="PackedScene" id=5]
+[ext_resource path="res://out of bounds.tscn" type="PackedScene" id=6]
 
 [node name="world" type="Node" index="0"]
 
@@ -65,5 +66,11 @@ _sections_unfolded = [ "Cell" ]
 [node name="Bot" parent="." index="4" instance=ExtResource( 5 )]
 
 position = Vector2( 256, 112 )
+
+[node name="out of bounds" parent="." index="5" instance=ExtResource( 6 )]
+
+position = Vector2( 96, 560 )
+scale = Vector2( 25, 0.8125 )
+world_scene = "res://world.tscn"
 
 

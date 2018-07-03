@@ -21,7 +21,6 @@ height = 44.0
 
 [node name="Bot" type="Area2D" index="0"]
 
-position = Vector2( 400, 240 )
 scale = Vector2( 0.5, 0.5 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -31,7 +30,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
-_sections_unfolded = [ "Audio Bus", "Collision", "Pickable", "Transform", "Z Index" ]
+_sections_unfolded = [ "Material", "Visibility" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -44,6 +43,7 @@ scale = Vector2( 0.592593, 0.474074 )
 frames = SubResource( 1 )
 animation = "walk"
 centered = false
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
