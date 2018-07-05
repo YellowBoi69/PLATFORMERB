@@ -31,7 +31,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -1835001, 0, 5, -1834998, 0, 6, -1834997, 0, 196610, -1769465, 0, 65541, -1769462, 0, 65541, -1703929, 0, 65541, -1703926, 0, 65541, -1703924, 0, 196613, -1638393, 0, 65541, -1638390, 0, 65541, -1572857, 0, 65541, -1572854, 0, 65541, -1572851, 0, 196613, -1507321, 0, 65541, -1507318, 0, 65541, -1441785, 0, 65541, -1441782, 0, 65541, -1441778, 0, 196613, -1376249, 0, 65541, -1376246, 0, 65541, -1310713, 0, 65541, -1310710, 0, 65541, -1310707, 0, 196613, -1245177, 0, 65541, -1245174, 0, 65541, -1179641, 0, 65541, -1179638, 0, 65541, -1179636, 0, 196613, -1114105, 0, 65541, -1114102, 0, 65541, -1048569, 0, 65541, -1048566, 0, 131075, -1048565, 0, 196610, -1048559, 0, 5, -983033, 0, 65541, -983030, 0, 65541, -983023, 0, 65541, -917497, 0, 65541, -917494, 0, 65541, -917492, 0, 196613, -917487, 0, 65541, -851961, 0, 65541, -851958, 0, 65541, -851951, 0, 65541, -786425, 0, 65541, -786422, 0, 65541, -786419, 0, 196613, -786415, 0, 65541, -720889, 0, 131075, -720888, 0, 196610, -720886, 0, 65541, -720879, 0, 65541, -655353, 0, 65541, -655350, 0, 65541, -655346, 0, 196613, -655343, 0, 65541, -589817, 0, 65542, -589816, 0, 7, -589814, 0, 65541, -589807, 0, 65541, -524280, 0, 65541, -524278, 0, 65541, -524272, 0, 6, -524271, 0, 65543, -458744, 0, 65541, -458742, 0, 65541, -458736, 0, 65541, -393208, 0, 65541, -393206, 0, 65541, -393201, 0, 6, -393200, 0, 65543, -327672, 0, 65541, -327670, 0, 65541, -327666, 0, 6, -327665, 0, 65543, -262136, 0, 65541, -262134, 0, 65541, -262131, 0, 196608, -262130, 0, 65543, -196600, 0, 65541, -196598, 0, 65541, -131064, 0, 65541, -131062, 0, 131075, -131061, 0, 196609, -131060, 0, 196610, -65528, 0, 65541, -65526, 0, 65541, -65522, 0, 196613, 0, 0, 196613, 5, 0, 196613, 8, 0, 65542, 9, 0, 131076, 10, 0, 65543, 65545, 0, 65541, 65549, 0, 196613, 131081, 0, 65541, 196608, 0, 196608, 196609, 0, 196609, 196610, 0, 131076, 196611, 0, 196609, 196612, 0, 196609, 196613, 0, 196610, 196617, 0, 65542, 196618, 0, 7, 262146, 0, 65541, 262154, 0, 65542, 262155, 0, 196610, 327682, 0, 65541, 327684, 0, 196608, 327685, 0, 196610, 393218, 0, 65541, 393229, 0, 196613, 458754, 0, 65541, 524290, 0, 65542, 524291, 0, 196609, 524292, 0, 196609, 524293, 0, 196609, 524294, 0, 196609, 524295, 0, 196609, 524296, 0, 196609, 524297, 0, 196609, 524298, 0, 196609, 524299, 0, 196610 )
+tile_data = PoolIntArray( -1835001, 0, 5, -1834998, 0, 6, -1834997, 0, 196610, -1769465, 0, 65541, -1769462, 0, 65541, -1703929, 0, 65541, -1703926, 0, 65541, -1703924, 0, 196613, -1638393, 0, 65541, -1638390, 0, 65541, -1572857, 0, 65541, -1572854, 0, 65541, -1572851, 0, 196613, -1507321, 0, 65541, -1507318, 0, 65541, -1441785, 0, 65541, -1441782, 0, 65541, -1441778, 0, 196613, -1376249, 0, 65541, -1376246, 0, 65541, -1310713, 0, 65541, -1310710, 0, 65541, -1310707, 0, 196613, -1245177, 0, 65541, -1245174, 0, 65541, -1179641, 0, 65541, -1179638, 0, 65541, -1179636, 0, 196613, -1114105, 0, 65541, -1114102, 0, 65541, -1048569, 0, 65541, -1048566, 0, 131075, -1048565, 0, 196610, -1048559, 0, 5, -983033, 0, 65541, -983030, 0, 65541, -983023, 0, 65541, -917497, 0, 65541, -917494, 0, 65541, -917492, 0, 196613, -917487, 0, 65541, -851961, 0, 65541, -851958, 0, 65541, -851951, 0, 65541, -786425, 0, 65541, -786422, 0, 65541, -786419, 0, 196613, -786415, 0, 65541, -720889, 0, 131075, -720888, 0, 196610, -720886, 0, 65541, -720879, 0, 65541, -655353, 0, 65541, -655350, 0, 65541, -655346, 0, 196613, -655343, 0, 65541, -589817, 0, 65542, -589816, 0, 7, -589814, 0, 65541, -589807, 0, 65541, -524280, 0, 65541, -524278, 0, 65541, -524272, 0, 6, -524271, 0, 65543, -458744, 0, 65541, -458742, 0, 65541, -458736, 0, 65541, -393208, 0, 65541, -393206, 0, 65541, -393201, 0, 6, -393200, 0, 65543, -327672, 0, 65541, -327670, 0, 65541, -327666, 0, 6, -327665, 0, 65543, -262136, 0, 65541, -262134, 0, 131075, -262133, 0, 196610, -262130, 0, 131077, -196600, 0, 65541, -196598, 0, 65541, -131064, 0, 65541, -131062, 0, 131075, -131061, 0, 196609, -131060, 0, 196610, -65528, 0, 65541, -65526, 0, 65541, -65522, 0, 196613, 0, 0, 196613, 5, 0, 196613, 8, 0, 65542, 9, 0, 131076, 10, 0, 65543, 65545, 0, 65541, 65549, 0, 196613, 131081, 0, 65541, 196608, 0, 196608, 196609, 0, 196609, 196610, 0, 131076, 196611, 0, 196609, 196612, 0, 196609, 196613, 0, 196610, 196617, 0, 65542, 196618, 0, 7, 262146, 0, 65541, 262154, 0, 65542, 262155, 0, 196610, 327682, 0, 65541, 327684, 0, 196608, 327685, 0, 196610, 393218, 0, 65541, 393229, 0, 196613, 458754, 0, 65541, 524290, 0, 65542, 524291, 0, 196609, 524292, 0, 196609, 524293, 0, 196609, 524294, 0, 196609, 524295, 0, 196609, 524296, 0, 196609, 524297, 0, 196609, 524298, 0, 196609, 524299, 0, 196610 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -80,7 +80,6 @@ world_scene = "res://world 6.tscn"
 [node name="Bot12" parent="Node" index="2" instance=ExtResource( 5 )]
 
 position = Vector2( 368, -16 )
-scale = Vector2( 0.5, 0.5 )
 world_scene = "res://world 6.tscn"
 
 [node name="Bot4" parent="Node" index="3" instance=ExtResource( 5 )]
@@ -116,7 +115,6 @@ world_scene = "res://world 6.tscn"
 [node name="Bot10" parent="Node" index="9" instance=ExtResource( 5 )]
 
 position = Vector2( 508, 496 )
-scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 world_scene = "res://world 6.tscn"
 
@@ -176,7 +174,6 @@ world_scene = "res://world 6.tscn"
 [node name="Bot27" parent="Node" index="19" instance=ExtResource( 5 )]
 
 position = Vector2( 784, -144 )
-scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 world_scene = "res://world 6.tscn"
 
@@ -187,119 +184,107 @@ scale = Vector2( 0.500001, 0.5 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 world_scene = "res://world 6.tscn"
 
-[node name="Bot21" parent="Node" index="21" instance=ExtResource( 5 )]
-
-position = Vector2( 880, -272 )
-scale = Vector2( 0.5, 0.5 )
-_sections_unfolded = [ "Material", "Transform", "Visibility" ]
-world_scene = "res://world 6.tscn"
-
-[node name="Bot22" parent="Node" index="22" instance=ExtResource( 5 )]
+[node name="Bot22" parent="Node" index="21" instance=ExtResource( 5 )]
 
 position = Vector2( 944, -336 )
-scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 world_scene = "res://world 6.tscn"
 
-[node name="Bot23" parent="Node" index="23" instance=ExtResource( 5 )]
+[node name="Bot23" parent="Node" index="22" instance=ExtResource( 5 )]
 
 position = Vector2( 1008, -400 )
-scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 world_scene = "res://world 6.tscn"
 
-[node name="Bot24" parent="Node" index="24" instance=ExtResource( 5 )]
+[node name="Bot24" parent="Node" index="23" instance=ExtResource( 5 )]
 
 position = Vector2( 1072, -528 )
 scale = Vector2( 0.499998, 0.5 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 world_scene = "res://world 6.tscn"
 
-[node name="Bot28" parent="Node" index="25" instance=ExtResource( 5 )]
+[node name="Bot28" parent="Node" index="24" instance=ExtResource( 5 )]
 
 position = Vector2( 912, -656 )
 scale = Vector2( 0.500001, 0.5 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 world_scene = "res://world 6.tscn"
 
-[node name="Bot29" parent="Node" index="26" instance=ExtResource( 5 )]
+[node name="Bot29" parent="Node" index="25" instance=ExtResource( 5 )]
 
 position = Vector2( 848, -784 )
-scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 world_scene = "res://world 6.tscn"
 
-[node name="Bot30" parent="Node" index="27" instance=ExtResource( 5 )]
+[node name="Bot30" parent="Node" index="26" instance=ExtResource( 5 )]
 
 position = Vector2( 784, -912 )
-scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 world_scene = "res://world 6.tscn"
 
-[node name="Bot31" parent="Node" index="28" instance=ExtResource( 5 )]
+[node name="Bot31" parent="Node" index="27" instance=ExtResource( 5 )]
 
 position = Vector2( 720, -1040 )
 scale = Vector2( 0.5, 0.499999 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 world_scene = "res://world 6.tscn"
 
-[node name="Bot32" parent="Node" index="29" instance=ExtResource( 5 )]
+[node name="Bot32" parent="Node" index="28" instance=ExtResource( 5 )]
 
 position = Vector2( 816, -1168 )
 scale = Vector2( 0.5, 0.500001 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 world_scene = "res://world 6.tscn"
 
-[node name="Bot33" parent="Node" index="30" instance=ExtResource( 5 )]
+[node name="Bot33" parent="Node" index="29" instance=ExtResource( 5 )]
 
 position = Vector2( 880, -1296 )
-scale = Vector2( 0.5, 0.5 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 world_scene = "res://world 6.tscn"
 
-[node name="Bot34" parent="Node" index="31" instance=ExtResource( 5 )]
+[node name="Bot34" parent="Node" index="30" instance=ExtResource( 5 )]
 
 position = Vector2( 944, -1424 )
 scale = Vector2( 0.499999, 0.499999 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 world_scene = "res://world 6.tscn"
 
-[node name="Bot35" parent="Node" index="32" instance=ExtResource( 5 )]
+[node name="Bot35" parent="Node" index="31" instance=ExtResource( 5 )]
 
 position = Vector2( 848, -1552 )
 scale = Vector2( 0.5, 0.499999 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 world_scene = "res://world 6.tscn"
 
-[node name="Bot36" parent="Node" index="33" instance=ExtResource( 5 )]
+[node name="Bot36" parent="Node" index="32" instance=ExtResource( 5 )]
 
 position = Vector2( 784, -1680 )
 scale = Vector2( 0.499999, 0.500002 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 world_scene = "res://world 6.tscn"
 
-[node name="Bot37" parent="Node" index="34" instance=ExtResource( 5 )]
+[node name="Bot37" parent="Node" index="33" instance=ExtResource( 5 )]
 
 position = Vector2( 528, -1248 )
 scale = Vector2( 0.5, 17 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 world_scene = "res://world 6.tscn"
 
-[node name="Bot39" parent="Node" index="35" instance=ExtResource( 5 )]
+[node name="Bot39" parent="Node" index="34" instance=ExtResource( 5 )]
 
 position = Vector2( 624, -1344 )
 scale = Vector2( 0.5, 14 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 world_scene = "res://world 6.tscn"
 
-[node name="Bot25" parent="Node" index="36" instance=ExtResource( 5 )]
+[node name="Bot25" parent="Node" index="35" instance=ExtResource( 5 )]
 
 position = Vector2( 544, -608 )
 scale = Vector2( 0.999999, 1 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 world_scene = "res://world 6.tscn"
 
-[node name="Bot38" parent="Node" index="37" instance=ExtResource( 5 )]
+[node name="Bot38" parent="Node" index="36" instance=ExtResource( 5 )]
 
 position = Vector2( 560, -720 )
 scale = Vector2( 0.5, 0.500001 )

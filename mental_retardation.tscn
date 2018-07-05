@@ -1,0 +1,625 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://autotiles.tres" type="TileSet" id=2]
+[ext_resource path="res://nonautotile.tres" type="TileSet" id=3]
+[ext_resource path="res://worldcomplete.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Bot.tscn" type="PackedScene" id=5]
+[ext_resource path="res://out of bounds.tscn" type="PackedScene" id=6]
+
+[node name="end" type="Node" index="0"]
+
+[node name="player" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 32, -32 )
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="TileMap" type="TileMap" parent="." index="1"]
+
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -2031619, 0, 6, -2031618, 0, 196609, -2031617, 0, 196609, -2097152, 0, 196609, -2097151, 0, 196609, -2097150, 0, 196609, -2097149, 0, 196609, -2097148, 0, 196609, -2097147, 0, 196609, -2097146, 0, 196609, -2097145, 0, 7, -1966088, 0, 5, -1966085, 0, 6, -1966084, 0, 196609, -1966083, 0, 65543, -2031609, 0, 65542, -2031608, 0, 196609, -2031607, 0, 7, -1900552, 0, 65541, -1900549, 0, 65541, -1966071, 0, 65542, -1966070, 0, 7, -1835016, 0, 131075, -1835015, 0, 196610, -1835013, 0, 65541, -1900534, 0, 65541, -1769480, 0, 65541, -1769477, 0, 65541, -1769473, 0, 196613, -1835005, 0, 196613, -1835001, 0, 5, -1834998, 0, 131075, -1834997, 0, 196610, -1703944, 0, 65541, -1703941, 0, 65541, -1769465, 0, 65541, -1769462, 0, 65541, -1638408, 0, 65541, -1638405, 0, 131075, -1638404, 0, 196610, -1703929, 0, 65541, -1703926, 0, 65541, -1703924, 0, 196613, -1572872, 0, 65541, -1572869, 0, 65541, -1638393, 0, 65541, -1638390, 0, 65541, -1507336, 0, 65541, -1507333, 0, 65541, -1507329, 0, 196613, -1572861, 0, 196613, -1572857, 0, 65541, -1572854, 0, 65541, -1572851, 0, 196613, -1441800, 0, 65541, -1441798, 0, 196608, -1441797, 0, 196612, -1507322, 0, 196608, -1507321, 0, 196612, -1507318, 0, 65541, -1376264, 0, 65541, -1376261, 0, 65541, -1441785, 0, 65541, -1441782, 0, 65541, -1441778, 0, 196613, -1310728, 0, 65541, -1310725, 0, 65541, -1376253, 0, 196613, -1376249, 0, 65541, -1376246, 0, 65541, -1245192, 0, 65541, -1245189, 0, 65541, -1245185, 0, 196613, -1310713, 0, 65541, -1310710, 0, 65541, -1310707, 0, 196613, -1179656, 0, 65541, -1179653, 0, 131075, -1179652, 0, 196610, -1245177, 0, 65541, -1245174, 0, 65541, -1114120, 0, 65541, -1114117, 0, 65541, -1179641, 0, 65541, -1179638, 0, 65541, -1179636, 0, 196613, -1048584, 0, 131075, -1048583, 0, 196610, -1048581, 0, 65541, -1048579, 0, 196613, -1114105, 0, 65541, -1114102, 0, 65541, -983048, 0, 65541, -983045, 0, 65541, -1048576, 0, 196613, -1048573, 0, 196613, -1048569, 0, 65541, -1048566, 0, 131075, -1048565, 0, 196610, -1048559, 0, 5, -917512, 0, 65541, -917509, 0, 65541, -983033, 0, 65541, -983030, 0, 65541, -983023, 0, 65541, -851976, 0, 65541, -851973, 0, 65541, -917498, 0, 196608, -917497, 0, 196612, -917494, 0, 65541, -917492, 0, 196613, -917487, 0, 65541, -786440, 0, 65541, -786437, 0, 65541, -851961, 0, 65541, -851958, 0, 65541, -851951, 0, 65541, -720904, 0, 65541, -720901, 0, 65541, -786428, 0, 196613, -786425, 0, 65541, -786422, 0, 65541, -786419, 0, 196613, -786415, 0, 65541, -655368, 0, 65541, -655365, 0, 131077, -720896, 0, 196613, -720889, 0, 131075, -720888, 0, 196610, -720886, 0, 65541, -720879, 0, 65541, -589832, 0, 65541, -655353, 0, 65541, -655350, 0, 65541, -655346, 0, 196613, -655343, 0, 65541, -524296, 0, 65541, -524290, 0, 196613, -589817, 0, 65542, -589816, 0, 7, -589814, 0, 65541, -589807, 0, 65541, -458760, 0, 65542, -458759, 0, 196609, -458758, 0, 196609, -458757, 0, 196609, -458756, 0, 196610, -524280, 0, 65541, -524278, 0, 65541, -524272, 0, 6, -524271, 0, 65543, -458744, 0, 65541, -458742, 0, 65541, -458736, 0, 65541, -393208, 0, 65541, -393206, 0, 65541, -393201, 0, 6, -393200, 0, 65543, -327672, 0, 65541, -327670, 0, 65541, -327666, 0, 6, -327665, 0, 65543, -262136, 0, 65541, -262134, 0, 131075, -262133, 0, 196610, -262130, 0, 131077, -196600, 0, 65541, -196598, 0, 65541, -131064, 0, 65541, -131062, 0, 131075, -131061, 0, 196609, -131060, 0, 196610, -65528, 0, 65541, -65526, 0, 65541, -65522, 0, 196613, 0, 0, 196613, 5, 0, 196613, 8, 0, 65542, 9, 0, 131076, 10, 0, 65543, 65545, 0, 65541, 65549, 0, 196613, 131081, 0, 65541, 196608, 0, 196608, 196609, 0, 196609, 196610, 0, 131076, 196611, 0, 196609, 196612, 0, 196609, 196613, 0, 196610, 196617, 0, 65542, 196618, 0, 7, 262146, 0, 65541, 262154, 0, 65542, 262155, 0, 196610, 327682, 0, 65541, 327684, 0, 196608, 327685, 0, 196610, 393218, 0, 65541, 393229, 0, 196613, 458754, 0, 65541, 524290, 0, 65542, 524291, 0, 196609, 524292, 0, 196609, 524293, 0, 196609, 524294, 0, 196609, 524295, 0, 196609, 524296, 0, 196609, 524297, 0, 196609, 524298, 0, 196609, 524299, 0, 196610 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TileMap2" type="TileMap" parent="." index="2"]
+
+mode = 0
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -1834989, 0, 0, -1834988, 16, 0, -1769453, 9, 0, -1769452, 10, 0 )
+_sections_unfolded = [ "Cell" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="worldcomplete" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 608, -32 )
+world_scene = "res://end screen.tscn"
+
+[node name="Node" type="Node" parent="." index="4"]
+
+[node name="Bot2" parent="Node" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( 32, 176 )
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot3" parent="Node" index="1" instance=ExtResource( 5 )]
+
+position = Vector2( 96, 176 )
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot12" parent="Node" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( 368, -16 )
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot4" parent="Node" index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 160, 176 )
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot5" parent="Node" index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 224, 176 )
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot6" parent="Node" index="5" instance=ExtResource( 5 )]
+
+position = Vector2( 288, 176 )
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot7" parent="Node" index="6" instance=ExtResource( 5 )]
+
+position = Vector2( 352, 176 )
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot8" parent="Node" index="7" instance=ExtResource( 5 )]
+
+position = Vector2( 417, 496 )
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot9" parent="Node" index="8" instance=ExtResource( 5 )]
+
+position = Vector2( 464, 496 )
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot10" parent="Node" index="9" instance=ExtResource( 5 )]
+
+position = Vector2( 508, 496 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot18" parent="Node" index="10" instance=ExtResource( 5 )]
+
+position = Vector2( 580, 496 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot11" parent="Node" index="11" instance=ExtResource( 5 )]
+
+position = Vector2( 620, 496 )
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot13" parent="Node" index="12" instance=ExtResource( 5 )]
+
+position = Vector2( 720, 496 )
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot17" parent="Node" index="13" instance=ExtResource( 5 )]
+
+position = Vector2( 670, 496 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot14" parent="Node" index="14" instance=ExtResource( 5 )]
+
+position = Vector2( 880, 368 )
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot15" parent="Node" index="15" instance=ExtResource( 5 )]
+
+position = Vector2( 720, 240 )
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot16" parent="Node" index="16" instance=ExtResource( 5 )]
+
+position = Vector2( 870, 48 )
+scale = Vector2( 0.500001, 0.5 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot19" parent="Node" index="17" instance=ExtResource( 5 )]
+
+position = Vector2( 720, -144 )
+scale = Vector2( 0.499999, 0.5 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot26" parent="Node" index="18" instance=ExtResource( 5 )]
+
+position = Vector2( 752, -144 )
+scale = Vector2( 0.500001, 0.5 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot27" parent="Node" index="19" instance=ExtResource( 5 )]
+
+position = Vector2( 784, -144 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot20" parent="Node" index="20" instance=ExtResource( 5 )]
+
+position = Vector2( 944, -80 )
+scale = Vector2( 0.500001, 0.5 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot22" parent="Node" index="21" instance=ExtResource( 5 )]
+
+position = Vector2( 944, -336 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot23" parent="Node" index="22" instance=ExtResource( 5 )]
+
+position = Vector2( 1008, -400 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot24" parent="Node" index="23" instance=ExtResource( 5 )]
+
+position = Vector2( 1072, -528 )
+scale = Vector2( 0.499998, 0.5 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot28" parent="Node" index="24" instance=ExtResource( 5 )]
+
+position = Vector2( 912, -656 )
+scale = Vector2( 0.500001, 0.5 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot29" parent="Node" index="25" instance=ExtResource( 5 )]
+
+position = Vector2( 848, -784 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot30" parent="Node" index="26" instance=ExtResource( 5 )]
+
+position = Vector2( 784, -912 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot31" parent="Node" index="27" instance=ExtResource( 5 )]
+
+position = Vector2( 720, -1040 )
+scale = Vector2( 0.5, 0.499999 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot32" parent="Node" index="28" instance=ExtResource( 5 )]
+
+position = Vector2( 816, -1168 )
+scale = Vector2( 0.5, 0.500001 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot33" parent="Node" index="29" instance=ExtResource( 5 )]
+
+position = Vector2( 880, -1296 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot34" parent="Node" index="30" instance=ExtResource( 5 )]
+
+position = Vector2( 944, -1424 )
+scale = Vector2( 0.499999, 0.499999 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot35" parent="Node" index="31" instance=ExtResource( 5 )]
+
+position = Vector2( 848, -1552 )
+scale = Vector2( 0.5, 0.499999 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot36" parent="Node" index="32" instance=ExtResource( 5 )]
+
+position = Vector2( 784, -1680 )
+scale = Vector2( 0.499999, 0.500002 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot40" parent="Node" index="33" instance=ExtResource( 5 )]
+
+position = Vector2( 720, -1808 )
+scale = Vector2( 0.500002, 0.499997 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot41" parent="Node" index="34" instance=ExtResource( 5 )]
+
+position = Vector2( 656, -1936 )
+scale = Vector2( 0.500001, 0.5 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot42" parent="Node" index="35" instance=ExtResource( 5 )]
+
+position = Vector2( 624, -2000 )
+scale = Vector2( 0.5, 0.499998 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot43" parent="Node" index="36" instance=ExtResource( 5 )]
+
+position = Vector2( 560, -2000 )
+scale = Vector2( 0.500001, 0.499998 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot44" parent="Node" index="37" instance=ExtResource( 5 )]
+
+position = Vector2( 496, -2064 )
+scale = Vector2( 0.5, 0.500004 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot45" parent="Node" index="38" instance=ExtResource( 5 )]
+
+position = Vector2( 432, -2064 )
+scale = Vector2( 0.5, 0.500004 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot46" parent="Node" index="39" instance=ExtResource( 5 )]
+
+position = Vector2( 368, -2064 )
+scale = Vector2( 0.5, 0.500004 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot47" parent="Node" index="40" instance=ExtResource( 5 )]
+
+position = Vector2( 304, -2064 )
+scale = Vector2( 0.5, 0.500004 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot48" parent="Node" index="41" instance=ExtResource( 5 )]
+
+position = Vector2( 240, -2064 )
+scale = Vector2( 0.5, 0.500004 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot49" parent="Node" index="42" instance=ExtResource( 5 )]
+
+position = Vector2( 176, -2064 )
+scale = Vector2( 0.5, 0.500004 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot50" parent="Node" index="43" instance=ExtResource( 5 )]
+
+position = Vector2( 112, -2064 )
+scale = Vector2( 0.5, 0.500004 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot51" parent="Node" index="44" instance=ExtResource( 5 )]
+
+position = Vector2( 80, -2064 )
+scale = Vector2( 0.5, 0.500004 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot52" parent="Node" index="45" instance=ExtResource( 5 )]
+
+position = Vector2( 48, -2064 )
+scale = Vector2( 0.5, 0.500004 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot53" parent="Node" index="46" instance=ExtResource( 5 )]
+
+position = Vector2( 16, -2064 )
+scale = Vector2( 0.5, 0.500004 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot54" parent="Node" index="47" instance=ExtResource( 5 )]
+
+position = Vector2( -16, -2064 )
+scale = Vector2( 0.5, 0.500004 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot55" parent="Node" index="48" instance=ExtResource( 5 )]
+
+position = Vector2( -112, -2064 )
+scale = Vector2( 0.5, 0.499994 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot56" parent="Node" index="49" instance=ExtResource( 5 )]
+
+position = Vector2( -160, -2064 )
+scale = Vector2( 0.5, 0.499994 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot57" parent="Node" index="50" instance=ExtResource( 5 )]
+
+position = Vector2( -208, -2000 )
+scale = Vector2( 0.5, 0.500002 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot58" parent="Node" index="51" instance=ExtResource( 5 )]
+
+position = Vector2( -240, -2000 )
+scale = Vector2( 0.5, 0.500002 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot59" parent="Node" index="52" instance=ExtResource( 5 )]
+
+position = Vector2( -272, -2000 )
+scale = Vector2( 0.5, 0.500002 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot60" parent="Node" index="53" instance=ExtResource( 5 )]
+
+position = Vector2( -304, -2000 )
+scale = Vector2( 0.5, 0.500002 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot61" parent="Node" index="54" instance=ExtResource( 5 )]
+
+position = Vector2( -416, -1888 )
+scale = Vector2( 1, 0.999998 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot62" parent="Node" index="55" instance=ExtResource( 5 )]
+
+position = Vector2( -416, -1888 )
+scale = Vector2( 1, 0.999998 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot63" parent="Node" index="56" instance=ExtResource( 5 )]
+
+position = Vector2( -352, -1504 )
+scale = Vector2( 1, 0.999998 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot64" parent="Node" index="57" instance=ExtResource( 5 )]
+
+position = Vector2( -432, -1104 )
+scale = Vector2( 0.5, 0.499999 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot66" parent="Node" index="58" instance=ExtResource( 5 )]
+
+position = Vector2( -400, -1104 )
+scale = Vector2( 0.5, 0.499999 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot67" parent="Node" index="59" instance=ExtResource( 5 )]
+
+position = Vector2( -344, -536 )
+scale = Vector2( 0.75, 0.749999 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot68" parent="Node" index="60" instance=ExtResource( 5 )]
+
+position = Vector2( -80, -604 )
+scale = Vector2( 0.5, 0.874999 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot69" parent="Node" index="61" instance=ExtResource( 5 )]
+
+position = Vector2( 432, -912 )
+scale = Vector2( 0.499999, 0.500001 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot71" parent="Node" index="62" instance=ExtResource( 5 )]
+
+position = Vector2( 208, -1040 )
+scale = Vector2( 0.5, 0.5 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot72" parent="Node" index="63" instance=ExtResource( 5 )]
+
+position = Vector2( 16, -1040 )
+scale = Vector2( 0.5, 0.500001 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot73" parent="Node" index="64" instance=ExtResource( 5 )]
+
+position = Vector2( -176, -1112 )
+scale = Vector2( 0.5, 0.750001 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot74" parent="Node" index="65" instance=ExtResource( 5 )]
+
+position = Vector2( -232, -1232 )
+scale = Vector2( 0.75, 0.500001 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot77" parent="Node" index="66" instance=ExtResource( 5 )]
+
+position = Vector2( 432, -1488 )
+scale = Vector2( 0.499999, 0.5 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot78" parent="Node" index="67" instance=ExtResource( 5 )]
+
+position = Vector2( 224, -1560 )
+scale = Vector2( 1e-005, 0.750001 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot79" parent="Node" index="68" instance=ExtResource( 5 )]
+
+position = Vector2( -32, -1567 )
+scale = Vector2( 0.5, 0.968751 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot83" parent="Node" index="69" instance=ExtResource( 5 )]
+
+position = Vector2( -80, -1519.5 )
+rotation = 4.71239
+scale = Vector2( 0.5, 0.484376 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot81" parent="Node" index="70" instance=ExtResource( 5 )]
+
+position = Vector2( 16, -1519.5 )
+rotation = 1.5708
+scale = Vector2( 0.5, 0.484376 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot82" parent="Node" index="71" instance=ExtResource( 5 )]
+
+position = Vector2( 16, -1519.5 )
+rotation = 1.5708
+scale = Vector2( 0.5, 0.484376 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot80" parent="Node" index="72" instance=ExtResource( 5 )]
+
+position = Vector2( -240, -1681 )
+scale = Vector2( 0.5, 0.468753 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot84" parent="Node" index="73" instance=ExtResource( 5 )]
+
+position = Vector2( -16, -1808 )
+scale = Vector2( 0.5, 0.500001 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot85" parent="Node" index="74" instance=ExtResource( 5 )]
+
+position = Vector2( 240, -1808 )
+scale = Vector2( 0.5, 0.499998 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot75" parent="Node" index="75" instance=ExtResource( 5 )]
+
+position = Vector2( -64, -1280 )
+scale = Vector2( 5.96046e-008, 0.868314 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot76" parent="Node" index="76" instance=ExtResource( 5 )]
+
+position = Vector2( 224, -1360 )
+scale = Vector2( 1e-005, -0.499997 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot70" parent="Node" index="77" instance=ExtResource( 5 )]
+
+position = Vector2( 304, -784 )
+scale = Vector2( 0.5, 0.499999 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot37" parent="Node" index="78" instance=ExtResource( 5 )]
+
+position = Vector2( 528, -1248 )
+scale = Vector2( 0.5, 17 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot39" parent="Node" index="79" instance=ExtResource( 5 )]
+
+position = Vector2( 624, -1344 )
+scale = Vector2( 0.5, 14 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot25" parent="Node" index="80" instance=ExtResource( 5 )]
+
+position = Vector2( 544, -608 )
+scale = Vector2( 0.999999, 1 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="Bot38" parent="Node" index="81" instance=ExtResource( 5 )]
+
+position = Vector2( 560, -720 )
+scale = Vector2( 0.5, 0.500001 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+world_scene = "res://mental_retardation.tscn"
+
+[node name="out of bounds2" parent="." index="5" instance=ExtResource( 6 )]
+
+position = Vector2( -160, 800 )
+scale = Vector2( 15.25, 1 )
+world_scene = "res://mental_retardation.tscn"
+
+[node name="out of bounds3" parent="." index="6" instance=ExtResource( 6 )]
+
+position = Vector2( 1360, 928 )
+scale = Vector2( 32.5, 1 )
+world_scene = "res://mental_retardation.tscn"
+
+
